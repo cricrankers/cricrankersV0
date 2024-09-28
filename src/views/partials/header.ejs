@@ -1,0 +1,123 @@
+<header id="headerdiv">
+
+    <div id="headerboxleft">
+        <div id="goatcontainer">
+            <img id="goat" src="../images/goatblackpng.png">
+        </div>
+
+        <div id="backarrowbackground">
+            <img src="../images/backarrow.svg" id="backarrow">
+        </div>
+
+        <div id="cricrankerscontainer">
+            <img id="cricrankers" src="../images/cricrankerslogo.png">
+        </div>
+    </div>
+
+    <div id="headerboxright">
+        <div id="menubackground">
+            <img src="../images/menu.svg" id="menuicon">
+        </div>
+    </div>
+
+
+</header>
+
+<style>
+
+@media (max-width:720px) {
+
+  #headerdiv {
+    width: 100%;
+    height: 63px;
+    top: 0%;
+    margin: 0;
+    display: flex;
+    position: fixed;
+    background-color: #0a0613;
+    align-items: center;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  }
+
+#headerboxleft {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#headerboxright {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#goatcontainer {
+    display: flex;
+    height: 100%;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #c8c9df;
+    margin: 0%;
+}
+
+#goat {
+    margin-left: 0;
+    height: 11px;
+    width: fit-content;
+    transform: rotate(-90deg);
+}
+
+
+
+#menubackground {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    background-color: rgba(54, 54, 64, 0.6);
+    justify-self: flex-end;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#menuicon {
+    width: 63%;
+    height: 63%;
+    opacity: 0.9;
+}
+
+#backarrowbackground{
+    width: 35px;
+    height: 35px;
+    border-radius: 40px;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+#backarrow{
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+    opacity: 0.8; 
+}
+#cricrankerscontainer{
+    width: 100px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+
+}
+#cricrankers{
+    width: 200px;
+    height: 33px;
+    opacity: 0.9;
+}
+} 
+</style>
