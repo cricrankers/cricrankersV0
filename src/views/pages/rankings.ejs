@@ -6,7 +6,12 @@
     <title>CricRankers</title>
 </head>
 
-    <style>
+<style>
+    #body{
+        display: none;
+    }
+   @media (max-width:720px) {
+    }
      #body{
         width: 100%;
         height: 1600px;
@@ -16,12 +21,20 @@
         flex-direction: column;
         align-items: center;
      }
-    </style>
+</style>
 
 <body id="body">
 
     <!--Header-->
     <%- include('../partials/header.ejs') %>
-    
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
