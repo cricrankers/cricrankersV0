@@ -24,8 +24,9 @@
             align-items: center;
          }
          #rankings-container{
-            width: 97%;
+            width: 95%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
          }
@@ -38,28 +39,27 @@
 
     <!--Header-->
     <%- include('../partials/header.ejs') %>
+    
+    <!-- Drawer -->
+    <%- include('../partials/drawer.ejs') %>
 
-    <!--Table Heading  -->
-    <%- include('../partials/tableHeading.ejs',{headingType:'CRICRANKERS',headingText:'ALL TIME CAREER RANKINGS'}) %>
 
+    <div id="rankings-container">
 
-  <div id="rankings-container">
+     <!--Table Heading  -->
+     <%- include('../partials/tableHeading.ejs',{headingType:'CRICRANKERS',headingText:'ALL TIME CAREER RANKINGS'}) %>
 
     <!-- Table Navigation Bar -->
-    <%- include('../partials/tableNav6.ejs') %>
+     <%- include('../partials/tableNav6.ejs') %>
 
-
-
-
-
-  </div>
+    </div>
    
 
 
 
 
-    <!-- Footer -->
-    <%- include('../partials/footer.ejs') %>
+     <!-- Footer -->
+     <%- include('../partials/footer.ejs') %>
 
 <script src="/js/views/rankings.js"></script>
 </script>
