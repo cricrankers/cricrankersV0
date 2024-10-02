@@ -1,0 +1,64 @@
+<div id="tablenav" >
+    <div id="tableNavParent" class="tablenav">
+        <div id="goatrank"   class="nav-element selected-tab">GOAT</div>
+        <div id="testrank"   class="nav-element">TEST</div>
+        <div id="odirank"    class="nav-element">ODI</div>
+        <div id="t20rank"    class="nav-element">T20</div> 
+        <div id="odiwcrank"  class="nav-element">ODI WC</div>
+        <div id="t20wcrank"  class="nav-element">T20 WC</div> 
+    </div> 
+</div>
+
+<style>
+    #tablenav{
+        display: none;
+    }
+    @media (max-width:1080px) {
+    #tablenav{
+        height: 35px;
+        width: 100%;
+        background-color: #f2f2f2;
+        margin-top: 1px;
+        border-radius: 28px;
+        border: 1px solid #e5e5e5 ;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .tablenav{
+        height: 100%;
+        width: 99%;
+        background-color: #f2f2f2;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .nav-element{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        height: 100%;
+        width: 17%;
+        user-select: none;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #6d6d6d;
+    }
+    .selected-tab{
+      width: 17%;
+      height: 90%;
+      border-radius:28px;
+      font-size: 12px;
+      background-color:#1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #f2f2f2;
+    }
+}
+</style>
+
+<script src="/js/partials/tableNav6.js"></script>
