@@ -11,6 +11,21 @@
        
     </div>
     <div style="height: 1px; width: 100%;opacity: 0.1; margin-top: 0px;background-color: aliceblue;"></div>
+
+<a href="#" class="anchor-drawer"><p>About</p></a>
+<a href="#" class="anchor-drawer"><p>Contact Us</p></a>
+<a href="#" class="anchor-drawer"><p>FAQs</p></a>
+
+<div style="height: 1px; width: 100%;opacity: 0.1; margin-top: 25px;background-color: aliceblue;"></div>
+
+<div class="social-media-links-container-drawer">
+    <a href="mailto:cricrankers@gmail.com" target="_blank"> <img src="../images/mail_icon.svg"  alt="mail/cricrankers" style="margin-left: 10px;margin-right: 5px; height: 27px; width: 27px;"></a>
+    <a href="https:www.instagram.com/cricrankers" target="_blank">  <img src="../images/instagram_icon.svg" alt="instagram/cricrankers" style="margin-left: 5px;margin-right: 5px; height: 27px; width: 27px;"></a>
+    <a href="https://www.twitter.com/cricrankers" target="_blank">  <img src="../images/twitter_icon.svg" alt="twitter/cricrankers" style="margin-left: 5px;margin-right: 10px; height: 25px; height: 27px; width: 27px;"></a>
+  </div>
+  <div class="drawer-text">
+    Connect @CricRankers
+ </div>
 </div>
 
 <!-- Overlay to detect outside clicks -->
@@ -81,19 +96,18 @@
 }
 
 
-#drawer a {
+.anchor-drawer {
+    width: 90%;
+    height: 30px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+    color: whitesmoke;
     display: block;
     transition: 0.3s;
     user-select: none;
-}
-
-#drawer a:hover {
-    background-color: #575757;
 }
 
 #drawer .close-btn {
@@ -125,6 +139,20 @@
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
     z-index: 1; 
+}
+.social-media-links-container-drawer{
+    width: 60%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.drawer-text{
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: aliceblue;
+    font-size: 11px;
+    opacity: 0.8;
 }
 }
 </style>
