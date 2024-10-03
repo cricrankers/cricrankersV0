@@ -24,7 +24,7 @@
             align-items: center;
          }
          #rankings-container{
-            width: 95%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -37,27 +37,26 @@
  
 <body id="body">
 
-    <!--Header-->
-    <%- include('../partials/header.ejs') %>
+     <!--Header-->
+     <%- include('../partials/header.ejs') %>
     
-    <!-- Drawer -->
-    <%- include('../partials/drawer.ejs') %>
+     <!-- Drawer -->
+     <%- include('../partials/drawer.ejs') %>
 
 
     <div id="rankings-container">
 
+     <!-- Search Bar -->
+     <%- include('../partials/searchBar.ejs') %>
+
      <!--Table Heading  -->
      <%- include('../partials/tableHeading.ejs',{headingType:'CRICRANKERS',headingText:'ALL TIME CAREER RANKINGS'}) %>
 
-    <!-- Table Navigation Bar -->
+     <!-- Table Navigation Bar -->
      <%- include('../partials/tableNav6.ejs') %>
 
     </div>
    
-
-
-
-
      <!-- Footer -->
      <%- include('../partials/footer.ejs') %>
 
