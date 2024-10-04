@@ -46,9 +46,18 @@
 
 
      <div id="body-container">
-
     
+       <!-- Collab heading -->
+       <%- include('../partials/textHeading.ejs',{ headingHere: contactPageData.collabHeading})  %>
 
+       <!-- Collab text -->
+       <%- include('../partials/text.ejs',{textHere: contactPageData.collabMessage})  %>
+
+       <!-- Feedback heading -->
+       <%- include('../partials/textHeading.ejs',{ headingHere: contactPageData.feedBackHeading})  %>
+
+       <!-- Feedback text -->
+       <%- include('../partials/text.ejs',{textHere: contactPageData.feedBackMessage})  %>
      </div>
    
      <!-- Footer -->

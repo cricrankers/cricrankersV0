@@ -1,3 +1,5 @@
+const {contactPageData,aboutPageData} = require('../utils/ejsVariables')
+
 function getRankings(req,res){
     res.render("rankings.ejs");
 }
@@ -7,11 +9,11 @@ function getProfile(req,res){
 }
 
 function getAbout(req,res){
-    res.render("about.ejs")
+    res.render("about.ejs",{aboutPageData})
 }
 
 function getContact(req,res){
-    res.render("contact.ejs")
+    res.render("contact.ejs",{contactPageData})
 }
 
 function getFAQs(req,res){

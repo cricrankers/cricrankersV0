@@ -30,7 +30,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 25px;
+            margin-top: 20px;
          }
     </style>
     
@@ -49,15 +49,10 @@
      <div id="body-container">
         
         <!-- Heading -->
-        <%- include('../partials/textHeading.ejs',{headingHere:'About CricRankers'}) %>
+        <%- include('../partials/textHeading.ejs',{headingHere: aboutPageData.aboutHeading}) %>
 
         <!-- Text -->
-        <%- include('../partials/text.ejs',{textHere:`<strong>Dear Cricket Enthusiasts</strong>,<br><br>We wanted to take a moment to share the journey behind this website,
-         crafted for the incredible players who grace the cricketing world.<br><br>
-         Through complex algorithms and ranking models, we’ve strived to measure the very best of a player’s abilities. While no algorithm or ranking model can be absolute, we guarantee to provide the best and keep making it better.<br><br>As we delved deeper,
-         we discovered a player’s impact goes far beyond numbers and data. They inspire us, leaving an indelible mark on the hearts of fans worldwide.<br><br>This website is designed not only to provide insights into a player’s performance but also to honour 
-         their passion and the countless moments that go beyond any algorithm’s reach.<br><br>This website celebrates the game of cricket, not just by analyzing statistics, but by embracing the spirit of the game.<br><br>With profound respect and admiration for
-         every player who has ever stepped onto the field.<br><br><strong>Team CricRanker</strong> ✍️` }) %>
+        <%- include('../partials/text.ejs',{textHere: aboutPageData.aboutText}) %>
     
 
      </div>
