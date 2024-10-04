@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="styles">
+    <title>CricRankers</title>
+    <style>
+        #body{
+            display: none;
+        }
+       @media (max-width:1080px) {
+        }
+         #body{
+            width: 100%;
+            min-height: 1080px;
+            max-height: 100vh ;
+            margin: 0;
+            margin-top: 55px;
+            background-color:#fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         #body-container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+         }
+    </style>
+    
+</head>
+
+ 
+<body id="body">
+
+     <!--Header-->
+     <%- include('../partials/header.ejs') %>
+    
+     <!-- Drawer -->
+     <%- include('../partials/drawer.ejs') %>
+
+
+     <div id="body-container">
+        
+        <!-- Heading -->
+        <%- include('../partials/textHeading.ejs',{headingHere:'About CricRankers'}) %>
+
+        <!-- Text -->
+        <%- include('../partials/text.ejs',{textHere:`<strong>Dear Cricket Enthusiasts</strong>,<br><br>We wanted to take a moment to share the journey behind this website,
+         crafted for the incredible players who grace the cricketing world.<br><br>
+         Through complex algorithms and ranking models, we’ve strived to measure the very best of a player’s abilities. While no algorithm or ranking model can be absolute, we guarantee to provide the best and keep making it better.<br><br>As we delved deeper,
+         we discovered a player’s impact goes far beyond numbers and data. They inspire us, leaving an indelible mark on the hearts of fans worldwide.<br><br>This website is designed not only to provide insights into a player’s performance but also to honour 
+         their passion and the countless moments that go beyond any algorithm’s reach.<br><br>This website celebrates the game of cricket, not just by analyzing statistics, but by embracing the spirit of the game.<br><br>With profound respect and admiration for
+         every player who has ever stepped onto the field.<br><br><strong>Team CricRanker</strong> ✍️` }) %>
+    
+
+     </div>
+   
+     <!-- Footer -->
+     <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

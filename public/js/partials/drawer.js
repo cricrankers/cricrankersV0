@@ -11,7 +11,6 @@ function closeDrawer() {
     document.getElementById("overlay").style.display = "none";
 }
 
-// Close drawer when clicking outside (using overlay)
 window.onclick = function(event) {
     const overlay = document.getElementById('overlay');
     if (event.target === overlay) {
