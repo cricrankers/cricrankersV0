@@ -1,3 +1,8 @@
+const rankingPageData = {
+   rankingHeading: `CRICRANKERS`,
+   rankingText:`ALL TIME CAREER RANKINGS`
+}
+
 const contactPageData = {
 
 collabHeading : `Collabrate with us!`,
@@ -26,5 +31,6 @@ aboutText:    `<strong>Dear Cricket Enthusiasts</strong>,<br><br>We wanted to ta
 }
 module.exports ={
    contactPageData,
-   aboutPageData
+   aboutPageData,
+   rankingPageData
 }

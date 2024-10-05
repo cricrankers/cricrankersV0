@@ -51,10 +51,13 @@
      <%- include('../partials/searchBar.ejs') %>
 
      <!--Table Heading  -->
-     <%- include('../partials/tableHeading.ejs',{headingType:'CRICRANKERS',headingText:'ALL TIME CAREER RANKINGS'}) %>
+     <%- include('../partials/tableHeading.ejs',{headingType: rankingPageData.rankingHeading ,headingText:rankingPageData.rankingText}) %>
 
-     <!-- Table Navigation Bar -->
+     <!-- Table Navigation Bar for cricrankers -->
      <%- include('../partials/tableNav6.ejs') %>
+
+     <!-- Ranking Tables Slider -->
+     <%- include('../partials/tableSlider.ejs') %>
 
     </div>
    
