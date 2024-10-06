@@ -21,8 +21,10 @@ document.getElementById('tableNavParent').addEventListener('click',(Event)=>{
   allTabs.forEach(tabs => {
     tabs.classList.remove('selected-tab');
   });
-  selectedTab.classList.add('selected-tab');
-
+  setTimeout(()=>{
+    selectedTab.classList.add('selected-tab');
+  },100);
+  
 }
 
 
