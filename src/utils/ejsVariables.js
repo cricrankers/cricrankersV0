@@ -1,6 +1,8 @@
 const rankingPageData = {
    rankingHeading: `CRICRANKERS`,
-   rankingText:`ALL TIME CAREER RANKINGS`
+   rankingText:`ALL TIME CAREER RANKINGS`,
+   iccRankingHeading:``,
+   iccText:`ICC MENS RANKINGS`
 }
 
 const contactPageData = {

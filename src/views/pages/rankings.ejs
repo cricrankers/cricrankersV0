@@ -12,7 +12,8 @@
        
          #body{
             width: 100%;
-            min-height: 1080px;
+            min-height: 100vh;
+            height: fit-content;
             margin: 0;
             margin-top: 55px;
             background-color:#edeef0;
@@ -24,9 +25,9 @@
          .body-container{
             width: 100%;
             max-width: 720px;
-            min-height: 1080px;
+            height: fit-content;
             margin: 0;
-            background-color:#edeef0;
+            background-color:transparent;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -37,6 +38,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-grow: 1;
+
          }
     </style>
     
@@ -47,14 +50,11 @@
 
     <!--Header-->
     <%- include('../partials/header.ejs') %>
+     
+    <!-- Drawer -->
+    <%- include('../partials/drawer.ejs') %>
 
    <div id="bodyContainer" class="body-container">
-
-   
-    
-    
-     <!-- Drawer -->
-     <%- include('../partials/drawer.ejs') %>
 
 
     <div id="rankings-container">
@@ -68,8 +68,19 @@
      <!-- Table Navigation Bar for cricrankers -->
      <%- include('../partials/tableNav6.ejs') %>
 
-     <!-- Ranking Tables Slider -->
-     <%- include('../partials/tableSlider.ejs') %>
+     <!-- Ranking Tables Slider for cricrankers -->
+     <%- include('../partials/tableSlider6.ejs') %>
+
+     <!-- Table 2 @ icc -->
+
+     <!--Table Heading  -->
+     <%- include('../partials/tableHeading.ejs',{headingType:rankingPageData.iccRankingHeading,headingText:rankingPageData.iccText}) %>
+
+     <!-- Table Navigation Bar for ICC -->
+     <%- include('../partials/tableNav3.ejs') %>
+
+     <!-- Ranking Tables Slider for icc-->
+     <%- include('../partials/tableSlider3.ejs') %>
 
     </div>
   
