@@ -1,4 +1,4 @@
-(async function fetchData() {
+(async function fetchPlayerData() {
     try {
 
         //fetch players data

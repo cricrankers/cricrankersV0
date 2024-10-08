@@ -8,18 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="styles">
     <title>CricRankers</title>
     <style>
-        #body{
-            display: none;
-        }
-       @media (max-width:1080px) {
-        }
+      
+       
          #body{
             width: 100%;
             min-height: 1080px;
-            max-height: 100vh ;            
             margin: 0;
             margin-top: 55px;
-            background-color:#fafafa;
+            background-color:#edeef0;
+            display: flex;
+            flex-direction: column;
+            user-select: none;
+            align-items: center;
+         }
+         .body-container{
+            width: 100%;
+            max-width: 720px;
+            min-height: 1080px;
+            margin: 0;
+            background-color:#edeef0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,8 +45,13 @@
  
 <body id="body">
 
-     <!--Header-->
-     <%- include('../partials/header.ejs') %>
+    <!--Header-->
+    <%- include('../partials/header.ejs') %>
+
+   <div id="bodyContainer" class="body-container">
+
+   
+    
     
      <!-- Drawer -->
      <%- include('../partials/drawer.ejs') %>
@@ -60,9 +72,11 @@
      <%- include('../partials/tableSlider.ejs') %>
 
     </div>
-   
-     <!-- Footer -->
-     <%- include('../partials/footer.ejs') %>
+  
+   </div>
+
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs') %>
 
 <script src="/js/views/rankings.js"></script>
 </body>

@@ -1,19 +1,16 @@
 <div class="carousel-container">
     <div class="carousel" id="carousel">
-      <div class="carousel-item">GOAT</div>
-      <div class="carousel-item">TEST</div>
-      <div class="carousel-item">ODI</div>
-      <div class="carousel-item">ODI WC</div>
-      <div class="carousel-item">T20</div>
-      <div class="carousel-item">T20WC</div>
+      <div id="ct1" class="carousel-item">GOAT</div>
+      <div id="ct2" class="carousel-item">TEST</div>
+      <div id="ct3" class="carousel-item">ODI</div>
+      <div id="ct4" class="carousel-item">ODI WC</div>
+      <div id="ct5" class="carousel-item">T20</div>
+      <div id="ct6" class="carousel-item">T20WC</div>
     </div>
 </div>
 
 <style>
-  .carousel-container{
-    display: none;
-  }
-    @media (max-width:1080px) {
+
 
      .carousel-container {
       width: 100%;
@@ -28,7 +25,7 @@
 
     .carousel {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
 
     .carousel-item {
@@ -44,7 +41,6 @@
       font-size: 32px;
       user-select: none;
     }
-}
 </style>
 
 <script type="module" src="/js/partials/tableSlider.js"></script>

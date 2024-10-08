@@ -16,7 +16,7 @@ document.getElementById('tableNavParent').addEventListener('click',(Event)=>{
 
 //function to update navBar with respect to the item being displayed in the table
  export function updateNavBar(selectedTabId){
-
+  
   const selectedTab = document.getElementById(`${selectedTabId}`);
   allTabs.forEach(tabs => {
     tabs.classList.remove('selected-tab');

@@ -29,12 +29,12 @@ carousel.addEventListener('touchmove', (e) => {
   const diffX = startX - x;         // Calculate the difference between the start and current positions
 
   // If the swipe distance is more than 50px to the left, go to the next slide
-  if (diffX > 50) {
+  if (diffX > 30) {
     nextSlide();                    // Call function to move to the next slide
     isTouching = false;             // End the touch event after moving to the next slide
   } 
   // If the swipe distance is more than 50px to the right, go to the previous slide
-  else if (diffX < -50) {
+  else if (diffX < -30) {
     prevSlide();                    // Call function to move to the previous slide
     isTouching = false;             // End the touch event after moving to the previous slide
   }
@@ -63,16 +63,17 @@ function prevSlide() {
     updateNavBar(`c${currentIndex + 1}`);        // Update the navigation bar with the new slide number
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`; // Shift the carousel to the previous slide
   }
-}
+} 
+
 
 export function goToSlide(slideId) {
-    const slideNumber = parseInt(slideId.replace('c', ''), 10);
-  
-    if (slideNumber >= 1 && slideNumber <= totalItems) {
-      currentIndex = slideNumber - 1; 
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    //   updateNavBar(slideId);  
-    } else {
-      console.error(`Invalid slideId: ${slideId}. Please pass a valid ID like 'c1', 'c2', etc.`);
-    }
+  const slideNumber = parseInt(slideId.replace('c', ''), 10);
+
+  if (slideNumber >= 1 && slideNumber <= totalItems) {
+    currentIndex = slideNumber - 1; 
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  //   updateNavBar(slideId);  
+  } else {
+    console.error(`Invalid slideId: ${slideId}. Please pass a valid ID like 'c1', 'c2', etc.`);
   }
+}
