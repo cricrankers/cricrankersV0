@@ -57,7 +57,7 @@
 
         function selectInput(Event){
           if(Event.target.innerHTML != "No players found"){
-            inputBox.value  = Event.target.innerHTML;
+            inputBox.value  = Event.target.innerText;
              //call the api function to bring profile here
           }
           
