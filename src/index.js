@@ -6,8 +6,7 @@ const Router  = require('./routes/routes.index');
 const path = require('path');
 const {connectDB} = require('./db/dbConnect');
 
-//database connection
-connectDB();
+
 
 //routes
 app.use("/",Router);
@@ -19,5 +18,9 @@ app.set("views",path.resolve(__dirname,'views/pages'));
 //serving static files
 app.use(express.static(path.resolve(__dirname,'../public')))
 
-app.listen(PORT,()=>{console.log(`Server started at port ${PORT}`)});
+//database connection
+connectDB().then(()=>{
+    app.listen(PORT,()=>{console.log(`Server started at port ${PORT}`)});
+
+})
 
