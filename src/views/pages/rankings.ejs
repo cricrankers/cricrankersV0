@@ -71,10 +71,10 @@
      <%- include('../partials/tableHeading.ejs',{headingType: rankingPageData.rankingHeading ,headingText:rankingPageData.rankingText}) %>
 
      <!-- Table Navigation Bar for cricrankers -->
-     <%- include('../partials/tableNav6.ejs') %>
+     <%- include('../partials/tableNavCricrankers.ejs') %>
 
      <!-- Ranking Tables Slider for cricrankers -->
-     <%- include('../partials/tableSlider6.ejs') %>
+     <%- include('../partials/tableSliderCricrankers.ejs',{rankingsData,type:'cricrankers'}) %>
 
 
      <!-- Table 2 @ icc -->
@@ -83,10 +83,10 @@
      <%- include('../partials/tableHeading.ejs',{headingType:rankingPageData.iccRankingHeading,headingText:rankingPageData.iccText}) %>
 
      <!-- Table Navigation Bar for ICC -->
-     <%- include('../partials/tableNav3.ejs') %>
+     <%- include('../partials/tableNavIcc.ejs') %>
 
      <!-- Ranking Tables Slider for icc-->
-     <%- include('../partials/tableSlider3.ejs') %>
+     <%- include('../partials/tableSliderIcc.ejs',{rankingsData,type:'icc'}) %>
 
 
     </div>

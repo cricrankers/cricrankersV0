@@ -4,7 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 7000;
 const Router  = require('./routes/routes.index');
 const path = require('path');
-const exp = require("constants");
+const {connectDB} = require('./db/dbConnect');
+
+//database connection
+connectDB();
 
 //routes
 app.use("/",Router);
@@ -16,5 +19,5 @@ app.set("views",path.resolve(__dirname,'views/pages'));
 //serving static files
 app.use(express.static(path.resolve(__dirname,'../public')))
 
-
 app.listen(PORT,()=>{console.log(`Server started at port ${PORT}`)});
+

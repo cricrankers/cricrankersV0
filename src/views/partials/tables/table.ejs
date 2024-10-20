@@ -1,0 +1,23 @@
+<div class="table-container">
+  
+   <!-- Table Header  -->
+   <%-include('./tableHeader.ejs')%>
+
+   <!-- Table Content  -->
+   <%-include('./tableContent.ejs',{partialData:tableData,type})%>
+
+   <!-- Table Footer  -->
+   <%-include('./tableFooter.ejs')%>
+
+</div>
+
+<style>
+.table-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: fit-content;
+}
+</style>

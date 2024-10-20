@@ -1,20 +1,25 @@
 const express = require('express');
 const Router = express.Router();
-const {getRankings,getProfile,getAbout,getFAQs,getContact} = require('../controllers/reqHandler')
+const {getRankingsPage} = require('../controllers/rankingsPageController');
+const {getProfilePage} = require('../controllers/profilePageController');
+const {getAboutPage} = require('../controllers/aboutPageController');
+const {getContactPage} = require('../controllers/contactPageController');
+const {getFAQsPage} = require('../controllers/FAQsPageController');
+
 
 Router.route("/rankings")
-.get(getRankings);
+.get(getRankingsPage)
 
 Router.route("/profile")
-.get(getProfile)
+.get(getProfilePage)
 
 Router.route("/about")
-.get(getAbout)
+.get(getAboutPage)
 
 Router.route("/contact")
-.get(getContact)
+.get(getContactPage)
 
 Router.route("/FAQs")
-.get(getFAQs)
+.get(getFAQsPage)
 
 module.exports = Router;

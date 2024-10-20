@@ -2,7 +2,7 @@
     try {
 
         //fetch players data
-        const response = await fetch('/players.json');
+        const response = await fetch('/utils/players.json');
         const players = await response.json();
         
         const suggestionBox = document.getElementById('searchSuggestion');
@@ -52,7 +52,7 @@
         inputBox.addEventListener('blur', () => {
             setTimeout(()=>{
                 suggestionBox.style.display = 'none';
-            },50)
+            },200)
         });
 
         function selectInput(Event){

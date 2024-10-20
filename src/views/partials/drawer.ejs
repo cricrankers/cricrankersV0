@@ -6,7 +6,7 @@
                </div>
         </div>
         <div class="logo-drawer-left">
-            <img src="../images/goatwhite.png" style=" opacity: 0.9; margin-left: 0;height:37px; " alt="CricRankers Logo">
+            <img src="../images/goatwhite.webp" style=" opacity: 0.9; margin-left: 0;height:37px; " alt="CricRankers Logo">
         </div>
        
     </div>
@@ -69,11 +69,15 @@
     display: flex;
     margin-top: 2px;
     margin-left: 10px;
-    background-color: transparent; /*rgba(54, 54, 64, 0.6)*/
     justify-self: flex-end;
+    -webkit-tap-highlight-color: rgba(75, 73, 73, 0.4); /*rgba(255, 255, 255, 0.4)*/
+    cursor: pointer;
     align-items: center;
     user-select: none;
     justify-content: center;
+}
+#closeMenuBackground:hover{
+    background-color: rgba(54, 54, 64, 0.6);
 }
 #drawer {
     height: 100%;
@@ -106,6 +110,9 @@
     display: block;
     transition: 0.3s;
     user-select: none;
+}
+.anchor-drawer:hover{
+    background-color:rgba(75, 73, 73, 0.4) ;
 }
 
 #drawer .close-btn {

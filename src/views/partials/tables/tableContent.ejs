@@ -3,12 +3,12 @@
     <div class="rank1-left">
       <div class="rank1-data-container">
         <div class="rank1-player-name" style="font-weight: 800">
-          Virat Kohli
+          <%= partialData.rank1.name %>
         </div>
         <div class="rating-rank1 rank1-player-name">
-          957
+          <%= partialData.rank1.points %>
           <img
-            src="/images/india.png"
+            src="<%= partialData.rank1.countryFlagUrl %>"
             alt="rank1 flag"
             class="rank1-flag-img"
           />
@@ -17,94 +17,104 @@
           <span
             class="comparename"
             style="font-size: 10px; font-weight: 500; color: whitesmoke"
-            >COMPARE</span
-          >
+          >COMPARE</span>
           <img class="compareicon" src="/images/compareicon.svg" />
         </div>
       </div>
     </div>
     <div class="rank1-right">
       <div class="rank1-image-container">
-        <div class="photo-container">
-          <div class="photo-div">
+        <% if (type === 'icc') { %>
+          <div class="photo-div" style="height: 70%; border-radius: 99px;">
             <img
-              src="/images/VIRATPROFILE.jpg"
+              src="<%= partialData.rank1.profileUrl %>"
               alt="rank1 picture"
               class="rank1-picture"
             />
           </div>
-          <div class="label-div">
-            <img
-              src="/images/goatwhite.png"
-              alt="goat logo"
-              class="label-img"
-            />
+        <% } else if (type === 'cricrankers') { %>
+          <div class="photo-container">
+            <div class="photo-div">
+              <img
+                src="<%= partialData.rank1.profileUrl %>"
+                alt="rank1 picture"
+                class="rank1-picture"
+              />
+            </div>
+            <div class="label-div">
+              <img
+                src="/images/goatwhite.webp"
+                alt="goat logo"
+                class="label-img"
+              />
+            </div>
           </div>
-        </div>
+        <% } %>
       </div>
     </div>
   </div>
 
   <div id="rank2-container" class="rank-container even">
-    <div class="rank-num">02</div>
+    <div class="rank-num"><%= partialData.rank2.rank %></div>
     <div class="profile-pic">
       <img
-        src="/images/VIRATPROFILE.jpg"
+        src="<%= partialData.rank2.profileUrl %>"
         alt="player image"
         class="profile-img"
       />
     </div>
     <div class="player-info">
-      <div class="playername">ROHIT SHARMA</div>
+      <div class="playername"><%= partialData.rank2.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="/images/india.png" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank2.countryFlagUrl %>" alt="country-flag" class="country-flag" />
       </div>
     </div>
-    <div class="ratings">864</div>
+    <div class="ratings"><%= partialData.rank2.points %></div>
   </div>
 
   <div id="rank3-container" class="rank-container odd">
-    <div class="rank-num">03</div>
+    <div class="rank-num"><%= partialData.rank3.rank %></div>
     <div class="profile-pic">
-      <img src="/images/VIRATPROFILE.jpg" alt="" class="profile-img" />
+      <img src="<%= partialData.rank3.profileUrl %>" alt="player image" class="profile-img" />
     </div>
     <div class="player-info">
-      <div class="playername">KUMAR SANGAKARA</div>
+      <div class="playername"><%= partialData.rank3.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="/images/india.png" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank3.countryFlagUrl %>" alt="country-flag" class="country-flag" />
       </div>
     </div>
-    <div class="ratings">764</div>
+    <div class="ratings"><%= partialData.rank3.points %></div>
   </div>
 
   <div id="rank4-container" class="rank-container even">
-    <div class="rank-num">04</div>
+    <div class="rank-num"><%= partialData.rank4.rank %></div>
     <div class="profile-pic">
-      <img src="/images/VIRATPROFILE.jpg" alt="" class="profile-img" />
+      <img src="<%= partialData.rank4.profileUrl %>" alt="player image" class="profile-img" />
     </div>
     <div class="player-info">
-      <div class="playername">MAHELA JAYVARDHANE</div>
+      <div class="playername"><%= partialData.rank4.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="/images/india.png" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank4.countryFlagUrl %>" alt="country-flag" class="country-flag" />
       </div>
     </div>
-    <div class="ratings">714</div>
+    <div class="ratings"><%= partialData.rank4.points %></div>
   </div>
 
   <div id="rank5-container" class="rank-container odd">
-    <div class="rank-num">05</div>
+    <div class="rank-num"><%= partialData.rank5.rank %></div>
     <div class="profile-pic">
-      <img src="/images/VIRATPROFILE.jpg" alt="" class="profile-img" />
+      <img src="<%= partialData.rank5.profileUrl %>" alt="player image" class="profile-img" />
     </div>
     <div class="player-info">
-      <div class="playername">RAHUL DRAVID</div>
+      <div class="playername"><%= partialData.rank5.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="/images/india.png" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank5.countryFlagUrl %>" alt="country-flag" class="country-flag" />
       </div>
     </div>
-    <div class="ratings">774</div>
+    <div class="ratings"><%= partialData.rank5.points %></div>
   </div>
 </div>
+
 
 <style>
   .even {
@@ -116,6 +126,7 @@
   .profile-img {
     height: 60%;
     border-radius: 99px;
+    font-size: 8px;
     width: fit-content;
   }
   .country-flag {
@@ -212,6 +223,7 @@
   .rank1-flag-img {
     height: 50%;
     margin-left: 5%;
+    font-size: 12px;
   }
   .label-img {
     height: 55%;
@@ -225,6 +237,7 @@
     width: fit-content;
     background-color: #10122a;
     overflow: hidden;
+    font-size: 12px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
@@ -257,9 +270,8 @@
     display: inline-block;
     color: #d2ced0;
     font-family: sans-serif;
-    font-weight: 500;
+    font-weight: 400;
   }
-
   .rank1-data-container {
     height: fit-content;
     width: 95%;
@@ -306,7 +318,7 @@
     transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
-    background-image: url("/images/logoBallWhite.png");
+    background-image: url("/images/logoBallWhite.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

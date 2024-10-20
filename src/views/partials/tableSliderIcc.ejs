@@ -1,8 +1,8 @@
 <div class="carousel-container-i">
     <div class="carousel-i" id="carousel-i">
-      <div id="it1" class="carousel-item-i"><%- include('../partials/tables-icc/iccTable.ejs') %></div>
-      <div id="it2" class="carousel-item-i"><%- include('../partials/tables-icc/iccTable.ejs') %></div>
-      <div id="it3" class="carousel-item-i"><%- include('../partials/tables-icc/iccTable.ejs') %></div>
+      <div id="it1" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccTestRankingsData,type}) %></div>
+      <div id="it2" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccOdiRankingsData,type}) %></div>
+      <div id="it3" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccT20RankingsData,type}) %></div>
     </div>
 </div>
 
