@@ -7,7 +7,6 @@ const path = require('path');
 const {connectDB} = require('./db/dbConnect');
 
 
-
 //routes
 app.use("/",Router);
 
@@ -21,6 +20,5 @@ app.use(express.static(path.resolve(__dirname,'../public')))
 //database connection
 connectDB().then(()=>{
     app.listen(PORT,()=>{console.log(`Server started at port ${PORT}`)});
-
 })
 
