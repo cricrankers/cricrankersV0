@@ -12,7 +12,7 @@ app.use("/",Router);
 
 //setup ejs
 app.set("view engine","ejs");
-app.set("views",path.resolve(__dirname,'views/pages'));
+app.set("views",path.resolve(__dirname,'views'));
 
 //serving static files
 app.use(express.static(path.resolve(__dirname,'../public')))

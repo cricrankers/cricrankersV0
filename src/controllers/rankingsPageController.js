@@ -12,7 +12,6 @@ let renderedRankingPage;
 async function getRankingsPage(req,res){
 
     try {
-    //first condition is temporily set for dev, remove it when deploying to enable page caching
     if(!renderedRankingPage){
 
         rankingsData = {
@@ -43,4 +42,3 @@ module.exports ={
     getRankingsPage
 }
 
-//rankingsData represents actual rankings while rankingPageData is representing text passing from ejsVariables in utils

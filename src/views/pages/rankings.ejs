@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="styles">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>CricRankers</title>
     <style>
       
@@ -44,8 +44,7 @@
             flex-grow: 1;
 
          }
-    </style>
-    
+    </style>   
 </head>
 
  
@@ -63,30 +62,29 @@
     <div id="rankings-container">
 
      <!-- Search Bar -->
-     <%- include('../partials/searchBar.ejs') %>
+     <%- include('/partials/searchBar.ejs') %>
 
      
-
      <!--Table Heading  -->
-     <%- include('../partials/tableHeading.ejs',{headingType: rankingPageData.rankingHeading ,headingText:rankingPageData.rankingText}) %>
+     <%- include('/partials/tableHeading.ejs',{headingType: rankingPageData.rankingHeading ,headingText:rankingPageData.rankingText}) %>
 
      <!-- Table Navigation Bar for cricrankers -->
-     <%- include('../partials/tableNavCricrankers.ejs') %>
+     <%- include('/partials/tableNavCricrankers.ejs') %>
 
      <!-- Ranking Tables Slider for cricrankers -->
-     <%- include('../partials/tableSliderCricrankers.ejs',{rankingsData,type:'cricrankers'}) %>
+     <%- include('/partials/tableSliderCricrankers.ejs',{rankingsData,type:'cricrankers'}) %>
 
 
      <!-- Table 2 @ icc -->
 
      <!--Table Heading  -->
-     <%- include('../partials/tableHeading.ejs',{headingType:rankingPageData.iccRankingHeading,headingText:rankingPageData.iccText}) %>
+     <%- include('/partials/tableHeading.ejs',{headingType:rankingPageData.iccRankingHeading,headingText:rankingPageData.iccText}) %>
 
      <!-- Table Navigation Bar for ICC -->
-     <%- include('../partials/tableNavIcc.ejs') %>
+     <%- include('/partials/tableNavIcc.ejs') %>
 
      <!-- Ranking Tables Slider for icc-->
-     <%- include('../partials/tableSliderIcc.ejs',{rankingsData,type:'icc'}) %>
+     <%- include('/partials/tableSliderIcc.ejs',{rankingsData,type:'icc'}) %>
 
 
     </div>
