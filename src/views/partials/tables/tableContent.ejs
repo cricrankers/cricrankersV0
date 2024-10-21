@@ -58,7 +58,7 @@
     </div>
   </div>
 
-  <div id="rank2-container" class="rank-container even">
+  <div id="rank2-container" class="rank-container odd">
     <div class="rank-num"><%= partialData.rank2.rank %></div>
     <div class="profile-pic">
       <img
@@ -77,7 +77,7 @@
     <div class="ratings"><%= partialData.rank2.points %></div>
   </div>
 
-  <div id="rank3-container" class="rank-container odd">
+  <div id="rank3-container" class="rank-container even">
     <div class="rank-num"><%= partialData.rank3.rank %></div>
     <div class="profile-pic">
       <img src="<%= partialData.rank3.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
@@ -91,7 +91,7 @@
     <div class="ratings"><%= partialData.rank3.points %></div>
   </div>
 
-  <div id="rank4-container" class="rank-container even">
+  <div id="rank4-container" class="rank-container odd">
     <div class="rank-num"><%= partialData.rank4.rank %></div>
     <div class="profile-pic">
       <img src="<%= partialData.rank4.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
@@ -105,7 +105,7 @@
     <div class="ratings"><%= partialData.rank4.points %></div>
   </div>
 
-  <div id="rank5-container" class="rank-container odd">
+  <div id="rank5-container" class="rank-container even">
     <div class="rank-num"><%= partialData.rank5.rank %></div>
     <div class="profile-pic">
       <img src="<%= partialData.rank5.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
@@ -181,7 +181,7 @@
     height: fit-content;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 650;
-    font-size: 16px;
+    font-size: 18px;
     color: #1a142c;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -210,7 +210,7 @@
     justify-content: center;
     background-color: rgb(175, 1, 175);
     border-radius: 5px;
-    margin-top: 10%;
+    padding: 2px;
     cursor: pointer;
   }
   .compareicon {
@@ -278,7 +278,7 @@
     font-weight: 400;
   }
   .rank1-data-container {
-    height: fit-content;
+    height: 90%;
     width: 95%;
     display: flex;
     margin-left: 5%;
@@ -346,6 +346,7 @@
     display: flex;
     align-items: center;
     margin-top: 7px;
+    margin-bottom: 2px;
     overflow: hidden;
     background-color: #10122a;
     position: relative;
@@ -353,6 +354,7 @@
   @media (max-width: 720px) {
     .rank1-container {
       height: 150px;
+      margin-bottom: 2px;
     }
     .rank1-right::before {
       height: 125%;
@@ -367,8 +369,10 @@
     .rank1-player-name {
       font-size: 80%;
     }
-    .comparecontainer {
+    .compare-container {
       margin-top: 0;
+      padding: 2px;
+
     }
     .rank-container {
       height: 70px;
@@ -382,7 +386,7 @@
       height: fit-content;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       font-weight: 650;
-      font-size: 13px;
+      font-size: 14px;
       color: #1a142c;
       margin-left: 5px;
       margin-bottom: 5px;

@@ -12,7 +12,7 @@ let renderedRankingPage;
 async function getRankingsPage(req,res){
 
     try {
-    if(!renderedRankingPage){
+    if(renderedRankingPage || !renderedRankingPage){
 
         rankingsData = {
             allTimeTestRankingsData: await setAllTimeTestRankings(),
