@@ -11,6 +11,7 @@
             src="<%= partialData.rank1.countryFlagUrl %>"
             alt="rank1 flag"
             class="rank1-flag-img"
+            loading="lazy"
           />
         </div>
         <div class="comparecontainer">
@@ -18,7 +19,7 @@
             class="comparename"
             style="font-size: 10px; font-weight: 500; color: whitesmoke"
           >COMPARE</span>
-          <img class="compareicon" src="/images/compareicon.svg" />
+          <img class="compareicon" src="/images/compareicon.svg" loading="lazy" />
         </div>
       </div>
     </div>
@@ -30,6 +31,7 @@
               src="<%= partialData.rank1.profileUrl %>"
               alt="rank1 picture"
               class="rank1-picture"
+              loading="lazy"
             />
           </div>
         <% } else if (type === 'cricrankers') { %>
@@ -39,6 +41,7 @@
                 src="<%= partialData.rank1.profileUrl %>"
                 alt="rank1 picture"
                 class="rank1-picture"
+                loading="lazy"
               />
             </div>
             <div class="label-div">
@@ -46,6 +49,7 @@
                 src="/images/goatwhite.webp"
                 alt="goat logo"
                 class="label-img"
+                loading="lazy"
               />
             </div>
           </div>
@@ -61,12 +65,13 @@
         src="<%= partialData.rank2.profileUrl %>"
         alt="player image"
         class="profile-img"
+        loading="lazy"
       />
     </div>
     <div class="player-info">
       <div class="playername"><%= partialData.rank2.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="<%= partialData.rank2.countryFlagUrl %>" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank2.countryFlagUrl %>" alt="country-flag" class="country-flag" loading="lazy" />
       </div>
     </div>
     <div class="ratings"><%= partialData.rank2.points %></div>
@@ -75,12 +80,12 @@
   <div id="rank3-container" class="rank-container odd">
     <div class="rank-num"><%= partialData.rank3.rank %></div>
     <div class="profile-pic">
-      <img src="<%= partialData.rank3.profileUrl %>" alt="player image" class="profile-img" />
+      <img src="<%= partialData.rank3.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
     </div>
     <div class="player-info">
       <div class="playername"><%= partialData.rank3.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="<%= partialData.rank3.countryFlagUrl %>" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank3.countryFlagUrl %>" alt="country-flag" class="country-flag" loading="lazy" />
       </div>
     </div>
     <div class="ratings"><%= partialData.rank3.points %></div>
@@ -89,12 +94,12 @@
   <div id="rank4-container" class="rank-container even">
     <div class="rank-num"><%= partialData.rank4.rank %></div>
     <div class="profile-pic">
-      <img src="<%= partialData.rank4.profileUrl %>" alt="player image" class="profile-img" />
+      <img src="<%= partialData.rank4.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
     </div>
     <div class="player-info">
       <div class="playername"><%= partialData.rank4.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="<%= partialData.rank4.countryFlagUrl %>" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank4.countryFlagUrl %>" alt="country-flag" class="country-flag" loading="lazy" />
       </div>
     </div>
     <div class="ratings"><%= partialData.rank4.points %></div>
@@ -103,12 +108,12 @@
   <div id="rank5-container" class="rank-container odd">
     <div class="rank-num"><%= partialData.rank5.rank %></div>
     <div class="profile-pic">
-      <img src="<%= partialData.rank5.profileUrl %>" alt="player image" class="profile-img" />
+      <img src="<%= partialData.rank5.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
     </div>
     <div class="player-info">
       <div class="playername"><%= partialData.rank5.name %></div>
       <div style="display: block; margin-left: 5px">
-        <img src="<%= partialData.rank5.countryFlagUrl %>" alt="country-flag" class="country-flag" />
+        <img src="<%= partialData.rank5.countryFlagUrl %>" alt="country-flag" class="country-flag" loading="lazy" />
       </div>
     </div>
     <div class="ratings"><%= partialData.rank5.points %></div>
