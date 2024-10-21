@@ -1,4 +1,3 @@
-import { goToSlide } from "./tableSlider.mjs";
 
 document.getElementById('tableNavParent6').addEventListener('click',(Event)=>{
   let  navElement = 'nav-element-c';
@@ -37,19 +36,19 @@ function tableNav(Event,navElement,selectedTab,idChar,carouselId,carouselItems){
 }
 
 
-//function to update navBar with respect to the item being displayed in the table
- export function updateNavBar(navElement,selectedTabId,selectedTabSlider){
-  const allTabs = Array.from(document.getElementsByClassName(`${navElement}`));
+function goToSlide(idChar, slideId, carouselId, carouselItems) {
+  const carousel = document.getElementById(`${carouselId}`);
 
-  const selectedTab = document.getElementById(`${selectedTabId}`);
-  allTabs.forEach(tabs => {
-    tabs.classList.remove(`${selectedTabSlider}`);
-  });
-  setTimeout(()=>{
-    selectedTab.classList.add(`${selectedTabSlider}`);
-  },100);
-  
+  const slideNumber = parseInt(slideId.replace(`${idChar}`, ''), 10);
+
+  if (slideNumber >= 1 && slideNumber <= carouselItems) {
+    let currentIndex = slideNumber - 1;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  } else {
+    console.error(`Invalid slideId: ${slideId}. Please pass a valid ID like 'c1', 'i1', etc.`);
+  }
 }
+
 
 
 

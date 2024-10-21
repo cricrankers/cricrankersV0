@@ -1,4 +1,3 @@
-import { updateNavBar } from "./tableNav.mjs";
 
 // cricrankers table slider block
 {
@@ -94,16 +93,15 @@ function prevSlide(idChar, carousel, navElement, currentIndex, selectedTabSlider
   return currentIndex;
 }
 
-// Function to sync navBar to this slider
-export function goToSlide(idChar, slideId, carouselId, carouselItems) {
-  const carousel = document.getElementById(`${carouselId}`);
+function updateNavBar(navElement,selectedTabId,selectedTabSlider){
+  const allTabs = Array.from(document.getElementsByClassName(`${navElement}`));
 
-  const slideNumber = parseInt(slideId.replace(`${idChar}`, ''), 10);
-
-  if (slideNumber >= 1 && slideNumber <= carouselItems) {
-    let currentIndex = slideNumber - 1;
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-  } else {
-    console.error(`Invalid slideId: ${slideId}. Please pass a valid ID like 'c1', 'i1', etc.`);
-  }
+  const selectedTab = document.getElementById(`${selectedTabId}`);
+  allTabs.forEach(tabs => {
+    tabs.classList.remove(`${selectedTabSlider}`);
+  });
+  setTimeout(()=>{
+    selectedTab.classList.add(`${selectedTabSlider}`);
+  },100);
+  
 }
