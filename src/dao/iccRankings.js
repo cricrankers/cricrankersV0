@@ -8,19 +8,19 @@ let rankingsData;
 
 
 async function getIccTestRankings(){
-    if(!rankingsData) await getRankingsData();
+    if(!rankingsData) rankingsData = await getRankingsData('iccRankings');
     let iccTestRankings = rankingsData.iccRankings.iccTestRankings;
     return iccTestRankings;
 }
 
 async function getIccOdiRankings(){
-    if(!rankingsData) await getRankingsData();
+    if(!rankingsData) rankingsData = await getRankingsData('iccRankings');
     let iccOdiRankings = rankingsData.iccRankings.iccOdiRankings;
     return iccOdiRankings;
 }
 
 async function getIccT20Rankings(){
-    if(!rankingsData) await getRankingsData();
+    if(!rankingsData) rankingsData = await getRankingsData('iccRankings');
     let iccT20Rankings = rankingsData.iccRankings.iccT20Rankings;
     return iccT20Rankings;
 }

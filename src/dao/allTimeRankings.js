@@ -8,19 +8,19 @@ let rankingsData;
 
 
 async function getAllTimeTestRankings(){
-    if(!rankingsData) await getRankingsData();
+    if(!rankingsData) rankingsData = await getRankingsData('allTimeRankings');
     let allTimeTestRankings = rankingsData.allTimeRankings.allTimeTestRankings;
     return allTimeTestRankings;
 }
 
 async function getAllTimeOdiRankings(){
-    if(!rankingsData) await getRankingsData();
+    if(!rankingsData) rankingsData = await getRankingsData('allTimeRankings');
     let allTimeOdiRankings = rankingsData.allTimeRankings.allTimeOdiRankings;
     return allTimeOdiRankings;
 }
 
 async function getAllTimeT20Rankings(){
-    if(!rankingsData) await getRankingsData();
+    if(!rankingsData) rankingsData = await getRankingsData('allTimeRankings');
     let allTimeT20Rankings = rankingsData.allTimeRankings.allTimeT20Rankings;
     return allTimeT20Rankings;
 }
