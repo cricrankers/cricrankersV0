@@ -52,7 +52,7 @@
         inputBox.addEventListener('blur', () => {
             setTimeout(()=>{
                 suggestionBox.style.display = 'none';
-            },200)
+            },100)
         });
 
         function selectInput(Event){
