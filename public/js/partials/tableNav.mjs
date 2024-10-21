@@ -1,4 +1,4 @@
-import { goToSlide } from "./tableSlider.js";
+import { goToSlide } from "./tableSlider.mjs";
 
 document.getElementById('tableNavParent6').addEventListener('click',(Event)=>{
   let  navElement = 'nav-element-c';

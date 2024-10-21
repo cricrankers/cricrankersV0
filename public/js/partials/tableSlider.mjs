@@ -1,4 +1,4 @@
-import { updateNavBar } from "./tableNav.js";
+import { updateNavBar } from "./tableNav.mjs";
 
 // cricrankers table slider block
 {
