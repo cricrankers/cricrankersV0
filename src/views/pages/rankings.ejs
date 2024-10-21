@@ -51,10 +51,10 @@
 <body id="body">
 
     <!--Header-->
-    <%- include('../partials/header.ejs') %>
+    <%- include('partials/header.ejs') %>
      
     <!-- Drawer -->
-    <%- include('../partials/drawer.ejs') %>
+    <%- include('partials/drawer.ejs') %>
 
    <div id="bodyContainer" class="body-container">
 
@@ -62,29 +62,29 @@
     <div id="rankings-container">
 
      <!-- Search Bar -->
-     <%- include('/partials/searchBar.ejs') %>
+     <%- include('partials/searchBar.ejs') %>
 
      
      <!--Table Heading  -->
-     <%- include('/partials/tableHeading.ejs',{headingType: rankingPageData.rankingHeading ,headingText:rankingPageData.rankingText}) %>
+     <%- include('partials/tableHeading.ejs',{headingType: rankingPageData.rankingHeading ,headingText:rankingPageData.rankingText}) %>
 
      <!-- Table Navigation Bar for cricrankers -->
-     <%- include('/partials/tableNavCricrankers.ejs') %>
+     <%- include('partials/tableNavCricrankers.ejs') %>
 
      <!-- Ranking Tables Slider for cricrankers -->
-     <%- include('/partials/tableSliderCricrankers.ejs',{rankingsData,type:'cricrankers'}) %>
+     <%- include('partials/tableSliderCricrankers.ejs',{rankingsData,type:'cricrankers'}) %>
 
 
      <!-- Table 2 @ icc -->
 
      <!--Table Heading  -->
-     <%- include('/partials/tableHeading.ejs',{headingType:rankingPageData.iccRankingHeading,headingText:rankingPageData.iccText}) %>
+     <%- include('partials/tableHeading.ejs',{headingType:rankingPageData.iccRankingHeading,headingText:rankingPageData.iccText}) %>
 
      <!-- Table Navigation Bar for ICC -->
-     <%- include('/partials/tableNavIcc.ejs') %>
+     <%- include('partials/tableNavIcc.ejs') %>
 
      <!-- Ranking Tables Slider for icc-->
-     <%- include('/partials/tableSliderIcc.ejs',{rankingsData,type:'icc'}) %>
+     <%- include('partials/tableSliderIcc.ejs',{rankingsData,type:'icc'}) %>
 
 
     </div>
