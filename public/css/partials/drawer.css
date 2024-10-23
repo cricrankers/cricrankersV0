@@ -1,0 +1,128 @@
+
+
+.logo-drawer-left{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.logo-drawer-right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.goat-logo-drawer{
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+ #backArrowIcon{
+    width: 63%;
+    height: 63%;
+    opacity: 0.9;
+ }  
+   
+#closeMenuBackground{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    margin-top: 2px;
+    margin-left: 10px;
+    justify-self: flex-end;
+    -webkit-tap-highlight-color: rgba(75, 73, 73, 0.4); /*rgba(255, 255, 255, 0.4)*/
+    cursor: pointer;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+}
+#closeMenuBackground:hover{
+    background-color: rgba(54, 54, 64, 0.6);
+}
+#drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#080e12;
+    overflow-x: hidden;
+    user-select: none;
+    transition: 0.5s;
+    padding-top: 2px;
+    z-index: 3; 
+}
+
+
+.anchor-drawer {
+    width: 90%;
+    height: 20px;
+    line-height: 20px;
+    -webkit-tap-highlight-color: rgba(75, 73, 73, 0.4); /*rgba(255, 255, 255, 0.4)*/
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    display: block;
+    transition: 0.3s;
+    user-select: none;
+}
+.anchor-drawer:hover{
+    background-color:rgba(75, 73, 73, 0.4) ;
+}
+
+#drawer .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+}
+
+
+#open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    margin: 10px;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 2; 
+}
+.social-media-links-container-drawer{
+    width: 60%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.drawer-text{
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: aliceblue;
+    font-size: 11px;
+    opacity: 0.8;
+}

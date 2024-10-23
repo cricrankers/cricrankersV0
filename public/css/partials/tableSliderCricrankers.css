@@ -1,0 +1,28 @@
+
+    .carousel-container-c {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 12px;
+      display: block;
+      max-width: 1000px;
+      overflow:hidden; 
+      z-index: 0;
+    }
+
+    .carousel-c {
+      display: flex;
+      transition: transform 0.25s ease-in-out;
+    }
+
+    .carousel-item-c {
+      min-width: 100%;
+      height: fit-content;
+      background-color: transparent;
+      color: gray;
+      border: 1px black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      user-select: none;
+    }

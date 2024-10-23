@@ -5,83 +5,10 @@
 </div>
 
 
-<div id="searchSuggestion" class="search-suggestion">
- 
+<div id="searchSuggestion" class="search-suggestion"> 
 </div>
 
 
-
-<style>
-
-
-.search-suggestion{
-    display: none;
-    border-radius: 12px;
-    border: solid 1px #e0dddd;
-    margin-top: 7px;
-    height: fit-content;
-    min-height: 20px;
-    max-height: 200px ;
-    overflow-y: scroll;
-    width: 100%;
-    overflow-x: hidden;
-    
-}
-.search-suggestion ul{
-    width: 100%;
-    padding: 0px 0px 0px 0px;
-}
-.search-suggestion ul li{
-    list-style: none;
-    width: 100%;
-    padding: 10px 20px;
-    border-radius: 3px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    color: #555;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent ; /*rgba(75, 73, 73, 0.4)*/
-}
-.search-suggestion ul li :hover{
-background: rgba(255, 255, 255, 0.4);
-}
-.search-box{
-    width: 100%;
-    height: fit-content;
-    background-color: #fafafa;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 28px;
-    border: solid 1px #e0dddd;
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.08);
-}
-.search-container{
-    width: 90%;
-    height: 40px;
-    color: black;
-    display: flex;
-    align-items: center;
-}
-.search-input{
-    height: 70%;
-    width: 95%;
-    outline: 0;
-    border: 0;
-    font-size: 15px;
-    text-decoration: none;
-    background-color: transparent;
-}
-.search-button{
-    outline: 0;
-    border: 0;
-    background-color: transparent;
-}
-
-</style>
+<link rel="stylesheet" href="/css/partials/searchBar.css">
 
 <script src="/js/partials/searchBar.js"></script>

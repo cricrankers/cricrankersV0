@@ -1,0 +1,30 @@
+
+    .table-header{
+      display: flex;
+      width: 97%;
+      align-items: center;
+      justify-content: center;
+    }
+    .table-headerRight{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width:40%;
+    }
+    .table-headerLeft{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width:60%;
+    }
+    .formatbox{
+        width: fit-content;
+        margin-right: 10px;
+        background-color: #140166;
+        height: 10px;
+        border-radius: 4px;
+        display: flex;
+        margin-top: 0px;
+        align-items: center;
+        padding: 5px;
+    }
