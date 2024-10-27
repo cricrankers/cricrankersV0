@@ -3,7 +3,7 @@
     "short_name": "CricRankers",
     "description": "Cricket Rankings and Analysis",
     "start_url": "https://cricrankers-v0.vercel.app/rankings",
-    "display": "standalone",
+    "display": "browser",
     "background_color": "#0a0613",
     "theme_color": "#000000",
     "icons": [
