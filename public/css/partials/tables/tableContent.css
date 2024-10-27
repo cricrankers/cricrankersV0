@@ -228,6 +228,10 @@
     background-color: #10122a;
     position: relative;
   }
+  .rankDiv{
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.2);
+  }
   @media (max-width: 720px) {
     .rank1-container {
       height: 150px;

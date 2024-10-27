@@ -3,7 +3,7 @@
 <div class="table-container">
   
    <!-- Table Header  -->
-   <%-include('./tableHeader.ejs')%>
+   <%-include('./tableHeader.ejs',{partialData:tableData,format})%>
 
    <!-- Table Content  -->
    <%-include('./tableContent.ejs',{partialData:tableData,type})%>

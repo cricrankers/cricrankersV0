@@ -5,6 +5,7 @@ const {getProfilePage} = require('../controllers/profilePageController');
 const {getAboutPage} = require('../controllers/aboutPageController');
 const {getContactPage} = require('../controllers/contactPageController');
 const {getFAQsPage} = require('../controllers/FAQsPageController');
+const {getComparePage} = require('../controllers/comparePageController');
 
 Router.route("/")
 .get((req,res)=>{
@@ -16,6 +17,9 @@ Router.route("/rankings")
 
 Router.route("/profile")
 .get(getProfilePage)
+
+Router.route("/compare")
+.get(getComparePage)
 
 Router.route("/about")
 .get(getAboutPage)

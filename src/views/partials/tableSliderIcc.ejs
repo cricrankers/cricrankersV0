@@ -3,9 +3,9 @@
 
 <div class="carousel-container-i">
     <div class="carousel-i" id="carousel-i">
-      <div id="it1" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccTestRankingsData,type}) %></div>
-      <div id="it2" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccOdiRankingsData,type}) %></div>
-      <div id="it3" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccT20RankingsData,type}) %></div>
+      <div id="it1" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccTestRankingsData,type,format:'TEST'}) %></div>
+      <div id="it2" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccOdiRankingsData,type,format:'ODI'}) %></div>
+      <div id="it3" class="carousel-item-i"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.iccT20RankingsData,type,format:'T20'}) %></div>
     </div>
 </div>
 

@@ -70,7 +70,7 @@
 }
 
 #cricrankerscontainer{
-    width: 100px;
+    width: fit-content;
     height: 100%;
     display: flex;
     margin-left: 10px;

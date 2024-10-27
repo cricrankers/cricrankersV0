@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/partials/compareBox.css">
+
+<div class="overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+        <button class="close-btn" id="closePopup">&times;</button>
+        <span class="headingText" style="margin-top: 25px;">COMPARE PLAYERS</span>
+     
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10%;margin-bottom: 10%; width: 90% ;height: fit-content;">
+            <div class="compare-box-bar">
+                <input id="compareInputBox1" type="text" autocomplete="off" class="compare-box-input" onfocus="suggestPlayer(this,'compareSuggestionBox1')" placeholder="Search Player">
+                <input id="checkBox1" type="checkbox" class="compare-checkbox">
+            </div>
+
+            <div id="compareSuggestionBox1" class="compare-box-suggestion" >    
+            
+            </div>
+        
+            <div class="headingText" style="margin-top: 20px;">VS</div>
+            
+            <div class="compare-box-bar">
+                <input id="compareInputBox2" type="text" autocomplete="off" class="compare-box-input" onfocus="suggestPlayer(this,'compareSuggestionBox2')" placeholder="Search Player">
+                <input id="checkBox2" type="checkbox"  class="compare-checkbox">
+            </div>
+
+            <div id="compareSuggestionBox2" class="compare-box-suggestion">    
+            </div>
+
+            <div id="errorBox" class="error-box"></div>
+
+        </div>
+
+        <button id="compareSubmitButton" class="custom-button">Submit</button>
+
+    </div>
+
+    
+</div>
+
+<script src="/js/partials/compareBox.js"></script>

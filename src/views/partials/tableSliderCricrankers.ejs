@@ -2,12 +2,12 @@
 
 <div class="carousel-container-c">
     <div class="carousel-c" id="carousel-c">
-      <div id="ct1" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData}) %></div>
-      <div id="ct2" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeOdiRankingsData}) %></div>
-      <div id="ct3" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeT20RankingsData}) %></div>
-      <div id="ct4" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData}) %></div>
-      <div id="ct5" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData}) %></div>
-      <div id="ct6" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData}) %></div>
+      <div id="ct1" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData, format:'ALL FORMAT'}) %></div>
+      <div id="ct2" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeOdiRankingsData, format:'TEST'}) %></div>
+      <div id="ct3" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeT20RankingsData, format:'ODI'}) %></div>
+      <div id="ct4" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData, format:'T20'}) %></div>
+      <div id="ct5" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData, format:'ODI WC'}) %></div>
+      <div id="ct6" class="carousel-item-c"><%- include('../partials/tables/table.ejs',{tableData: rankingsData.allTimeTestRankingsData, format:'T20 WC'}) %></div>
     </div>
 </div>
 

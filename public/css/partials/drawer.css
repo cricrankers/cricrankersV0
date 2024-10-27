@@ -110,6 +110,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
+    /* backdrop-filter: blur(1px); */
     z-index: 2; 
 }
 .social-media-links-container-drawer{

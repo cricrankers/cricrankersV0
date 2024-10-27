@@ -58,6 +58,8 @@
         function selectInput(Event){
           if(Event.target.innerHTML != "No players found"){
             inputBox.value  = Event.target.innerText;
+            let player = inputBox.value.trim().replaceAll(' ','-');
+            window.location.href = `/profile?player=${player}`;
              //call the api function to bring profile here
           }
           
