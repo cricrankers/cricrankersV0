@@ -6,7 +6,7 @@ function openDrawer() {
     document.getElementById("overlay").style.display = "block";
 }
 
- export function closeDrawer() {
+ function closeDrawer() {
     document.getElementById("drawer").style.width = "0";
     document.getElementById("overlay").style.display = "none";
 }
