@@ -6,3 +6,5 @@ document.querySelectorAll('.rankDiv').forEach(element => {
     })
   
 });
+
+import { closeDrawer } from "../partials/drawer";

@@ -1,0 +1,18 @@
+.category-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.category-label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 650;
+    font-size:13px;
+    color:#3b4751;
+    align-self: center;
+}
+@media (min-width:720px) {
+    .category-label{
+        font-size: 17px;
+    }
+}

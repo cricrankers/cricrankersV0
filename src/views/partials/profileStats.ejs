@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/partials/profileStats.css">
+
+<div class="profile-stats-container">
+
+    <div class="category-container">
+        <%- include('./statsPartials/statsHeader.ejs',{heading:'Format'})%>
+        <%- include('./statsPartials/statsBar.ejs')%>
+        <%- include('./statsPartials/statsBar.ejs')%>
+        <%- include('./statsPartials/statsBar.ejs')%>
+    </div>
+
+    <hr class="hr">
+
+    <div class="category-container">
+        <%- include('./statsPartials/statsHeader.ejs',{heading:'World Cup'})%>
+        <%- include('./statsPartials/statsBar.ejs')%>
+        <%- include('./statsPartials/statsBar.ejs')%>
+    </div>
+
+    <hr class="hr">
+
+    <div class="category-container">
+        <%- include('./statsPartials/statsHeader.ejs',{heading:'Venue'})%> 
+        <%- include('./statsPartials/statsBar.ejs')%>
+        <%- include('./statsPartials/statsBar.ejs')%> 
+    </div>
+
+</div>
+
+<div class="profile-graph-container">
+
+    <%- include('./statsPartials/statsHeader.ejs',{heading:'Career Graph'})%> 
+
+</div>
