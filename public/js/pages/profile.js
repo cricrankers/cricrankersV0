@@ -13,3 +13,9 @@ async function shareProfile(){
       alert("Sharing not supported in this browser.");
     }
   };
+  document.querySelectorAll(".stats-row").forEach(div => {
+    div.addEventListener('click', () => {
+      window.location.href = `/`; // Ensure this points to your desired location
+    });
+  });
+  

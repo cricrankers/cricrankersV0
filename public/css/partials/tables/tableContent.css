@@ -100,6 +100,7 @@
   .rating-rank1 {
     height: 34px;
     display: inline;
+    font-weight: 650;
     align-items: center;
   }
   .rank1-flag-img {
@@ -230,9 +231,12 @@
   }
   .rankDiv{
     cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0.2);
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
   }
   @media (max-width: 720px) {
+    .rating-rank1{
+      font-weight: 650;
+    }
     .rank1-container {
       height: 150px;
       margin-bottom: 2px;
@@ -274,6 +278,7 @@
     }
     .ratings {
       font-size: 14px;
+      font-weight: 650;
     }
     .rank-num {
       font-size: 12px;

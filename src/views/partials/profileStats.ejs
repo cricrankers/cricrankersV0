@@ -4,25 +4,25 @@
 
     <div class="category-container">
         <%- include('./statsPartials/statsHeader.ejs',{heading:'Format'})%>
-        <%- include('./statsPartials/statsBar.ejs')%>
-        <%- include('./statsPartials/statsBar.ejs')%>
-        <%- include('./statsPartials/statsBar.ejs')%>
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.formats.test, label:'Test'})%>
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.formats.odi, label:'ODI'})%>
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.formats.t20, label:'T20'})%>
     </div>
 
     <hr class="hr">
 
     <div class="category-container">
         <%- include('./statsPartials/statsHeader.ejs',{heading:'World Cup'})%>
-        <%- include('./statsPartials/statsBar.ejs')%>
-        <%- include('./statsPartials/statsBar.ejs')%>
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.worldCups.odi, label:'ODI'})%>
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.worldCups.t20, label:'T20'})%>
     </div>
 
     <hr class="hr">
 
     <div class="category-container">
         <%- include('./statsPartials/statsHeader.ejs',{heading:'Venue'})%> 
-        <%- include('./statsPartials/statsBar.ejs')%>
-        <%- include('./statsPartials/statsBar.ejs')%> 
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.venue.home, label:'Home'})%>
+        <%- include('./statsPartials/statsBar.ejs',{statsBarData: profileData.data.careerStats.venue.away, label:'Away'})%> 
     </div>
 
 </div>

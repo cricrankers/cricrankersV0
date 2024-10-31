@@ -31,8 +31,4 @@ aboutText:    `<strong>Dear Cricket Enthusiasts</strong>,<br><br>We wanted to ta
                their passion and the countless moments that go beyond any algorithm’s reach.<br><br>This website celebrates the game of cricket, not just by analyzing statistics, but by embracing the spirit of the game.<br><br>With profound respect and admiration for
                every player who has ever stepped onto the field.<br><br><strong>Team CricRanker</strong> ✍️`
 }
-module.exports ={
-   contactPageData,
-   aboutPageData,
-   rankingPageData
-}
+export { contactPageData, aboutPageData, rankingPageData };

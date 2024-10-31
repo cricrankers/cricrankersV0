@@ -1,4 +1,4 @@
-const {getRankingsData} = require('./dao.index');
+import { getRankingsData } from './dao.index.js';
 
 let rankingsData;
 
@@ -25,8 +25,5 @@ async function getIccT20Rankings(){
     return iccT20Rankings;
 }
 
-module.exports = {
-    getIccTestRankings,
-    getIccOdiRankings,
-    getIccT20Rankings
-}
+export { getIccTestRankings, getIccOdiRankings, getIccT20Rankings };
+

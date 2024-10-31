@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="/css/partials/tables/tableContent.css">
+<link rel="stylesheet" href="/css/partials/tables/tableContent.css?v=1">
 
 
 <div class="table-content">
-  <div class="rank1-container rankDiv" data-playerName="<%= partialData.rank1.name %>">
+  <div class="rank1-container rankDiv" data-playerName="<%= partialData.rank1.id %>">
     <div class="rank1-left">
       <div class="rank1-data-container">
         <div class="rank1-player-name getNamePopup" style="font-weight: 800">
@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <div id="rank2-container" class="rank-container odd rankDiv" data-playerName="<%= partialData.rank2.name %>">
+  <div id="rank2-container" class="rank-container odd rankDiv" data-playerName="<%= partialData.rank2.id %>">
     <div class="rank-num"><%= partialData.rank2.rank %></div>
     <div class="profile-pic">
       <img
@@ -80,7 +80,7 @@
     <div class="ratings"><%= partialData.rank2.points %></div>
   </div>
 
-  <div id="rank3-container" class="rank-container even rankDiv" data-playerName="<%= partialData.rank3.name %>">
+  <div id="rank3-container" class="rank-container even rankDiv" data-playerName="<%= partialData.rank3.id %>">
     <div class="rank-num"><%= partialData.rank3.rank %></div>
     <div class="profile-pic">
       <img src="<%= partialData.rank3.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
@@ -94,7 +94,7 @@
     <div class="ratings"><%= partialData.rank3.points %></div>
   </div>
 
-  <div id="rank4-container" class="rank-container odd rankDiv" data-playerName="<%= partialData.rank4.name %>">
+  <div id="rank4-container" class="rank-container odd rankDiv" data-playerName="<%= partialData.rank4.id %>">
     <div class="rank-num"><%= partialData.rank4.rank %></div>
     <div class="profile-pic">
       <img src="<%= partialData.rank4.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />
@@ -108,7 +108,7 @@
     <div class="ratings"><%= partialData.rank4.points %></div>
   </div>
 
-  <div id="rank5-container" class="rank-container even rankDiv" data-playerName="<%= partialData.rank5.name %>">
+  <div id="rank5-container" class="rank-container even rankDiv" data-playerName="<%= partialData.rank5.id %>">
     <div class="rank-num"><%= partialData.rank5.rank %></div>
     <div class="profile-pic">
       <img src="<%= partialData.rank5.profileUrl %>" alt="player image" class="profile-img" loading="lazy" />

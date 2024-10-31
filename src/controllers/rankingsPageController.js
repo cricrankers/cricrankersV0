@@ -1,11 +1,14 @@
-const {rankingPageData} = require('../utils/ejsVariables')
-const {setAllTimeTestRankings,setAllTimeOdiRankings,setAllTimeT20Rankings} = require('../dto/allTimeRankings')
-const {setIccTestRankings,setIccOdiRankings,setIccT20Rankings} = require('../dto/iccRankings')
-const ejs = require('ejs');
-const path = require('path');
+import { rankingPageData } from '../utils/ejsVariables.js';
+import { setAllTimeTestRankings, setAllTimeOdiRankings, setAllTimeT20Rankings } from '../dto/allTimeRankings.js';
+import { setIccTestRankings, setIccOdiRankings, setIccT20Rankings } from '../dto/iccRankings.js';
+import ejs from 'ejs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const rankingPagePath = path.join(__dirname, '../views/pages/rankings.ejs');
-
 let rankingsData;
 let renderedRankingPage;
 
@@ -38,7 +41,5 @@ async function getRankingsPage(req,res){
 }
 
 
-module.exports ={
-    getRankingsPage
-}
+export { getRankingsPage };
 

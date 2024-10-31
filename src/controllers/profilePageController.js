@@ -1,17 +1,23 @@
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { setCompleteProfileData } from '../dto/profileData.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
 const filePath = path.join(__dirname, '../views/pages/profile.ejs');
 
-function getProfilePage(req,res){
+async function getProfilePage(req,res){
 
     try {
-        
-    let player = req.query.player;
 
-    let profilePageData = {
-      msg:`Profile of "${player}" will be displayed here`
+    let playerId = req.query.player;
+
+    let profileData = {
+        data: await setCompleteProfileData(playerId)
     }
-    
-    res.render(filePath,{profilePageData})
+    res.render(filePath,{profileData})
     }
     catch (error) {
         console.error("Error occured while passing data to the page",error);  
@@ -19,6 +25,4 @@ function getProfilePage(req,res){
     }
 }   
 
-module.exports ={
-    getProfilePage
-}
+export { getProfilePage };

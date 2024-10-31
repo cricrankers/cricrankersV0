@@ -1,4 +1,4 @@
-const { getAllTimeTestRankings, getAllTimeOdiRankings, getAllTimeT20Rankings } = require('../dao/allTimeRankings');
+import { getAllTimeTestRankings, getAllTimeOdiRankings, getAllTimeT20Rankings } from '../dao/allTimeRankings.js';
 
 async function createRankingDTO(getRankingsFunction) {
     let rankingsDTO = {};
@@ -25,8 +25,5 @@ async function setAllTimeT20Rankings() {
     return createRankingDTO(getAllTimeT20Rankings);
 }
 
-module.exports = {
-    setAllTimeTestRankings,
-    setAllTimeOdiRankings,
-    setAllTimeT20Rankings
-};
+export { setAllTimeTestRankings, setAllTimeOdiRankings, setAllTimeT20Rankings };
+

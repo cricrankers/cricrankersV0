@@ -39,4 +39,7 @@
    margin-bottom: 15px;
    opacity: 0.4;
 }
- 
+.stats-row{
+   -webkit-tap-highlight-color: rgba(0,0,0,0.2);
+
+}

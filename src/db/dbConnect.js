@@ -1,7 +1,8 @@
-const { MongoClient } = require('mongodb');
-require("dotenv").config({path:'.env'});
+import { MongoClient } from 'mongodb';
+import 'dotenv/config';
 
-const uri = process.env.MONGO_URI 
+const uri = process.env.MONGO_URI;
+
 
 if (!uri) {
     throw new Error("MONGO_URI environment variable is not set");
@@ -28,7 +29,4 @@ process.on('SIGINT', async () => {
     process.exit(0);
 });
 
-module.exports = {
-    connectDB,
-    client
-}
+export { connectDB, client };

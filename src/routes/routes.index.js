@@ -1,11 +1,13 @@
-const express = require('express');
+import express from 'express';
+import { getRankingsPage } from '../controllers/rankingsPageController.js';
+import { getProfilePage } from '../controllers/profilePageController.js';
+import { getAboutPage } from '../controllers/aboutPageController.js';
+import { getContactPage } from '../controllers/contactPageController.js';
+import { getFAQsPage } from '../controllers/FAQsPageController.js';
+import { getComparePage } from '../controllers/comparePageController.js';
+
 const Router = express.Router();
-const {getRankingsPage} = require('../controllers/rankingsPageController');
-const {getProfilePage} = require('../controllers/profilePageController');
-const {getAboutPage} = require('../controllers/aboutPageController');
-const {getContactPage} = require('../controllers/contactPageController');
-const {getFAQsPage} = require('../controllers/FAQsPageController');
-const {getComparePage} = require('../controllers/comparePageController');
+
 
 Router.route("/")
 .get((req,res)=>{
@@ -30,4 +32,4 @@ Router.route("/contact")
 Router.route("/FAQs")
 .get(getFAQsPage)
 
-module.exports = Router;
+export default Router;

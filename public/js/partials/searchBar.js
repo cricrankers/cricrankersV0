@@ -1,20 +1,17 @@
 (async function fetchPlayerData() {
     try {
-
-        //fetch players data
         const response = await fetch('/utils/players.json');
         const players = await response.json();
-        
+
         const suggestionBox = document.getElementById('searchSuggestion');
         const inputBox = document.getElementById('searchInput');
 
-        //function to generate suggestion
         function giveSuggestion() {
             const input = inputBox.value.replace(/\s+/g, '').toLowerCase();
             let result = [];
 
             if (input.length) {
-                result = players
+                result = Object.keys(players)
                     .filter(player => player.toLowerCase().replace(/\s+/g, '').includes(input))
                     .sort((a, b) => 
                         a.toLowerCase().replace(/\s+/g, '').indexOf(input) - 
@@ -25,7 +22,6 @@
             displaySuggestion(result);
         }
 
-        //function to display  suggestion
         function displaySuggestion(result) {
             if (inputBox.value) {
                 suggestionBox.style.display = 'flex';
@@ -44,37 +40,36 @@
         inputBox.addEventListener('input', giveSuggestion);
 
         inputBox.addEventListener('focus', () => {
-            if(inputBox.value){
+            if (inputBox.value) {
                 suggestionBox.style.display = 'flex';
             }
         });
 
         inputBox.addEventListener('blur', () => {
-            setTimeout(()=>{
+            setTimeout(() => {
                 suggestionBox.style.display = 'none';
-            },100)
+            }, 100);
         });
 
-        function selectInput(Event){
-          if(Event.target.innerHTML != "No players found"){
-            inputBox.value  = Event.target.innerText;
-            let player = inputBox.value.trim().replaceAll(' ','-');
-            window.location.href = `/profile?player=${player}`;
-             //call the api function to bring profile here
-          }
-          
+        function selectInput(Event) {
+            if (Event.target.innerHTML != "No players found") {
+                const selectedPlayer = Event.target.innerText;
+                inputBox.value = selectedPlayer;
+
+                const playerId = players[selectedPlayer];
+                window.location.href = `/profile?player=${playerId}`;
+            }
         }
 
-        suggestionBox.addEventListener('click',(Event)=>{
-           if(Event.target.classList.contains('search-list')){
-            selectInput(Event);
-           }
-        })
+        suggestionBox.addEventListener('click', (Event) => {
+            if (Event.target.classList.contains('search-list')) {
+                selectInput(Event);
+            }
+        });
 
-        document.getElementById('searchButton').addEventListener('click',()=>{
+        document.getElementById('searchButton').addEventListener('click', () => {
             suggestionBox.style.display = 'none';
-            //call the api here to fetch profile
-        })
+        });
 
     } catch (error) {
         console.error('Error fetching data:', error);

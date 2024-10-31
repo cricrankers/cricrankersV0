@@ -54,6 +54,8 @@
   .photo-div {
     height: 75%;
     width: fit-content;
+    min-height: 136px;
+    min-width: 136px;
     background-color: #10122a;
     overflow: hidden;
     font-size: 12px;
@@ -84,7 +86,7 @@
     align-items: center;
   }
   .label-img {
-    height: 50%;
+    height: 45%;
     opacity: 0.9;
   }
   .profile-picture {
@@ -181,7 +183,7 @@
     }
     .profile-player-name{
         font-weight: 650;
-        font-size:30px;
+        font-size:25px;
         color:#D2CED0;
     }  
     .profile-player-career,.profile-player-country{
@@ -205,4 +207,9 @@
     .share-background{
         margin-top: 5px;
     }
+    .photo-div{
+        min-width: 95px;
+        min-height: 95px;
+    }
+
 }

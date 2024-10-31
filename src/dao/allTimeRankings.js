@@ -1,4 +1,4 @@
-const {getRankingsData} = require('./dao.index');
+import { getRankingsData } from './dao.index.js';
 
 let rankingsData;
 
@@ -25,9 +25,6 @@ async function getAllTimeT20Rankings(){
     return allTimeT20Rankings;
 }
 
-module.exports = {
-    getAllTimeTestRankings,
-    getAllTimeOdiRankings,
-    getAllTimeT20Rankings
-}
+export { getAllTimeTestRankings, getAllTimeOdiRankings, getAllTimeT20Rankings };
+
 

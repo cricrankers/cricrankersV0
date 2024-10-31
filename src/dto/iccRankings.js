@@ -1,4 +1,4 @@
-const { getIccTestRankings, getIccOdiRankings, getIccT20Rankings } = require('../dao/iccRankings');
+import { getIccTestRankings, getIccOdiRankings, getIccT20Rankings } from '../dao/iccRankings.js';
 
 async function createRankingDTO(getRankingsFunction) {
     let rankingsDTO = {};
@@ -25,8 +25,5 @@ async function setIccT20Rankings() {
     return createRankingDTO(getIccT20Rankings);
 }
 
-module.exports = {
-    setIccTestRankings,
-    setIccOdiRankings,
-    setIccT20Rankings
-};
+export { setIccTestRankings, setIccOdiRankings, setIccT20Rankings };
+

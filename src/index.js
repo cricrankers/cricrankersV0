@@ -1,11 +1,15 @@
-require("dotenv").config({path:'./.env'});
-const express = require('express');
+import 'dotenv/config';
+import express from 'express';
+import Router from './routes/routes.index.js';
+import path from 'path';
+import { connectDB } from './db/dbConnect.js';
+import { fileURLToPath } from 'url';
+
 const app = express();
 const PORT = process.env.PORT || 7000;
-const Router  = require('./routes/routes.index');
-const path = require('path');
-const {connectDB} = require('./db/dbConnect');
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //routes
 app.use("/",Router);
