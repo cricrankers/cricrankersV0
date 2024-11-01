@@ -11,18 +11,20 @@ const PORT = process.env.PORT || 7000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-//routes
-app.use("/",Router);
+// Routes
+app.use("/", Router);
 
-//setup ejs
-app.set("view engine","ejs");
-app.set("views",path.resolve(__dirname,'views'));
+// Setup EJS
+app.set("view engine", "ejs");
+app.set("views", path.resolve(__dirname, 'views'));
 
-//serving static files
-app.use(express.static(path.resolve(__dirname,'../public')))
+// static files with cache control and ETag enabled
+app.use(express.static(path.resolve(__dirname, '../public'), {
+    maxAge: '30m', 
+    etag: true    
+}));
 
-//database connection
-connectDB().then(()=>{
-    app.listen(PORT,()=>{console.log(`Server started at port ${PORT}`)});
-})
-
+// Database connection
+connectDB().then(() => {
+    app.listen(PORT, () => { console.log(`Server started at port ${PORT}`); });
+});

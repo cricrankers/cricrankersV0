@@ -1,6 +1,6 @@
 (async function fetchPlayerData() {
     try {
-        const response = await fetch('/utils/players.json');
+        const response = await fetch('/utils/playersV0.json');
         const players = await response.json();
 
         const suggestionBox = document.getElementById('searchSuggestion');
@@ -48,7 +48,7 @@
         inputBox.addEventListener('blur', () => {
             setTimeout(() => {
                 suggestionBox.style.display = 'none';
-            }, 100);
+            }, 150);
         });
 
         function selectInput(Event) {

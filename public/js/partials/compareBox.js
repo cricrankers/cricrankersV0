@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const compareInputBox2 = document.getElementById("compareInputBox2");
     const errorBox = document.getElementById('errorBox');
 
-    const response = await fetch('/utils/players.json');
+    const response = await fetch('/utils/playersV0.json');
     players = await response.json();
 
     document.querySelectorAll('.openCompareBox').forEach(button => {
