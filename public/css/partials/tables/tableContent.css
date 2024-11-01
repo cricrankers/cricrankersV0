@@ -117,6 +117,8 @@
   }
   .photo-div {
     height: 75%;
+    min-height: 112.5px;
+    min-width: 112.5px;
     width: fit-content;
     background-color: #10122a;
     overflow: hidden;
@@ -291,5 +293,9 @@
     }
     .odd {
       background-color: transparent;
+    }
+    .photo-div{
+      min-width: 84.38px;
+      min-height: 84.38px;
     }
   }
