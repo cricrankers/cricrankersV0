@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/css/partials/compareBanner.css?v=2">
+
+<div class="compare-profile-banner-container" style="justify-content: space-between;" >
+  <div class="compare-profile-banner-right" style="width: 35%;">
+    <div class="compare-banner-image-container">
+        <div class="compare-photo-container" data-playerId="<%= compareBannerData.profileData1.id  %>">
+            <div class="compare-photo-div">
+              <img
+                src="<%= compareBannerData.profileData1.profileUrl  %>"
+                alt="rank1 picture"
+                class="compare-profile-picture"
+                loading="lazy"
+              />
+            </div>
+            <div class="compare-label-div">
+              <img
+                src="<%= compareBannerData.profileData1.countryFlagUrl  %>"
+                alt="flag"
+                class="compare-label-img"
+                loading="lazy"
+              />
+            </div>
+        </div>
+    </div>
+  </div>
+
+<div style="display: flex; flex-direction: column;align-items: center; justify-content: center; height: 90%;">
+  <div class="compare-vs-text" >
+    VS
+  </div>
+  <div class="compare-container openCompareBox" style="align-self: flex-end; margin-top: 20%;" data-playerName="<%= compareBannerData.profileData1.name %>">
+    <span
+      class="comparename"
+      style="font-size: 10px; font-weight: 500; color: whitesmoke"
+    >COMPARE</span>
+    <img class="compareicon" src="/images/compareicon.svg" loading="lazy" />
+  </div>
+</div>
+  
+
+  <div class="compare-profile-banner-right" style="width: 35%;">
+    <div class="compare-banner-image-container">
+        <div class="compare-photo-container" data-playerId="<%= compareBannerData.profileData2.id  %>">
+            <div class="compare-photo-div">
+              <img
+                src="<%= compareBannerData.profileData2.profileUrl  %>"
+                alt="rank1 picture"
+                class="compare-profile-picture"
+                loading="lazy"
+              />
+            </div>
+            <div class="compare-label-div">
+              <img
+                src="<%= compareBannerData.profileData2.countryFlagUrl  %>"
+                alt="flag"
+                class="compare-label-img"
+                loading="lazy"
+              />
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

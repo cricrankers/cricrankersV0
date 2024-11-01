@@ -1,0 +1,136 @@
+.compare-profile-banner-container {
+    width: 97%;
+    height: 250px;
+    margin-top: 25px;
+    display: flex;
+    border-radius: 12px;
+    background-color: #10122a;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.compare-profile-banner-right {
+    width: 35%;
+    height: 97%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.compare-profile-banner-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 125%;
+    width: 125%;
+    background-image: url("/images/logoBallWhite.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.compare-banner-image-container {
+    height: 97%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.compare-photo-div {
+    height: 75%;
+    width: fit-content;
+    min-height: 136px;
+    min-width: 136px;
+    background-color: #10122a;
+    overflow: hidden;
+    font-size: 12px;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.compare-label-div {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a2432;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.compare-photo-container {
+    height: 75%;
+    width: fit-content;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 8px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.compare-label-img {
+    height: 45%;
+    opacity: 0.9;
+}
+
+.compare-profile-picture {
+    height: 100%;
+}
+
+.compare-vs-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 650;
+    font-size: 40px;
+    color: #D2CED0;
+    margin: 0 10px;
+}
+.compare-container {
+    width: 87px;
+    height: 22px;
+    display: flex;
+    align-self: baseline;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-self: flex-end;
+    justify-content: center;
+    background-color: rgb(175, 1, 175);
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+  }
+  .compareicon {
+    width: 30%;
+    height: 90%;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+  }
+
+@media (max-width: 720px) {
+    .compare-profile-banner-container {
+        height: 175px;
+    }
+    .compare-vs-text {
+        font-size: 25px;
+    }
+    .compare-photo-div {
+        min-width: 95px;
+        min-height: 95px;
+        cursor: pointer;
+    }
+}

@@ -32,5 +32,6 @@ async function getProfileData(playerId) {
     }
 }
 
+
 export { rankingsCollection, getRankingsData, getProfileData };
 

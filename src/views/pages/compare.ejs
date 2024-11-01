@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link rel="manifest" href="/manifest.json">
     <title>CricRankers</title>
-    <link rel="stylesheet" href="/css/pages/rankings.css">
+    <link rel="stylesheet" href="/css/pages/compare.css">
     <link rel="shortcut icon" href="/images/logoBallWhite.webp" type="image/x-icon">
     
 </head>
@@ -25,10 +25,20 @@
    <div id="bodyContainer" class="body-container">
 
 
-    <div id="rankings-container"style="min-height: 720px; text-align: center;">
+    <div class="profile-container">
 
-     <%- comparePageData.msg %>
-    
+     <!-- Search Bar -->
+     <%- include('../partials/searchBar.ejs') %>
+
+     <!-- Profile Banner -->
+     <%- include('../partials/compareBanner.ejs',{compareBannerData: comparisionProfileData.profileData}) %>
+
+     <!-- Stats -->
+     <%- include('../partials/compareProfileStats.ejs',{compareStatsData : comparisionProfileData.profileData}) %>
+
+    <!-- Comparision Box -->
+    <%- include('../partials/compareBox.ejs')  %>
+     
     </div>
   
    </div>
@@ -36,8 +46,8 @@
     <!-- Footer -->
     <%- include('../partials/footer.ejs') %>
 
-    <!-- CompareBox -->
-     
+   
 
+<script src="/js/pages/compare.js?v=1"></script>
 </body>
 </html>

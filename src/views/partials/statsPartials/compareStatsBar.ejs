@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/partials/statsPartials/compareStatsBar.css?v=3">
+
+<% 
+let player1percent = 0;
+let player2percent = 0;
+let backgroundColor1 = 'transparent';
+let backgroundColor2 = 'transparent';
+
+function getColor(points) {
+    if (points >= 50) { 
+        return 'green'; 
+    }
+    else if (points > 35 && points < 50) { 
+        return 'orange'; 
+    } else { 
+        return 'red'; 
+    }
+}
+
+function getPointsPercent(index, player1points, player2points) {
+    const total = player1points + player2points;
+    if (index === 1) {
+        return (player1points / total) * 100;
+    } else if (index === 2) {
+        return (player2points / total) * 100;
+    }
+    return 0;
+}
+
+player1percent = parseFloat(getPointsPercent(1, playerData1.points, playerData2.points).toFixed(1));
+player2percent = parseFloat(getPointsPercent(2, playerData1.points, playerData2.points).toFixed(1));
+
+backgroundColor1 = getColor(player1percent);
+backgroundColor2 = getColor(player2percent);
+%>
+
+<div class="stats-row">
+    <div class="stats-label"><%- label %></div>    
+    <div class="stats"><%= player1percent %>%</div>
+    <div class="stats-bar">
+        <div class="stats-bar-fill" 
+             style="background-color: <%= backgroundColor1 %>; width: <%= player1percent %>%;">
+        </div>
+        <div class="stats-bar-fill" 
+             style="background-color: <%= backgroundColor2 %>; align-self: flex-end; width: <%= player2percent %>%;">
+        </div>
+    </div>
+    <div class="stats"><%= player2percent %>%</div>
+    <div class="row-arrow">
+        <img src="/images/leftarrow.svg" style="height: 100%; opacity: 0.7;">
+    </div> 
+</div>

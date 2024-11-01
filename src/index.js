@@ -20,7 +20,7 @@ app.set("views", path.resolve(__dirname, 'views'));
 
 // static files with cache control and ETag enabled
 app.use(express.static(path.resolve(__dirname, '../public'), {
-    maxAge: '30m', 
+    maxAge: '15m', 
     etag: true    
 }));
 

@@ -58,6 +58,7 @@
 
                 const playerId = players[selectedPlayer];
                 window.location.href = `/profile?player=${playerId}`;
+                inputBox.value = ''
             }
         }
 
