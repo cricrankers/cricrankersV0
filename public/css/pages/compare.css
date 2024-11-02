@@ -1,7 +1,7 @@
 
 #body{
     width: 100%;
-    min-height: 1000px;
+    min-height: 900px;
     height: fit-content;
     margin: 0;
     margin-top: 55px;
@@ -15,7 +15,7 @@
  .body-container{
     width: 100%;
     max-width: 720px;
-    min-height: 1000px;
+    min-height: 900px;
     height: fit-content;
     margin: 0;
     background-color:transparent;

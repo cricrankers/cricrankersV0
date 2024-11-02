@@ -1,0 +1,125 @@
+<div class="career-points-chart">
+    <canvas id="careerPointsChart"></canvas>
+</div>
+
+<style>
+    .career-points-chart {
+        width: 100%; /* Full width of the container */
+        max-width: 600px; /* Limit maximum width */
+        margin: 0 auto; /* Center the chart component */
+    }
+
+    canvas {
+        width: 100% !important; /* Ensure canvas takes full width */
+        height: auto !important; /* Maintain aspect ratio */
+        display: block; /* Fix inline spacing issues */
+    }
+</style>
+
+<script>
+    const ctx = document.getElementById('careerPointsChart').getContext('2d');
+
+    const careerYears = Array.from({ length: 10 }, (_, i) => i + 1); // [1, 2, ..., 10]
+    const calendarYears = Array.from({ length: 10 }, (_, i) => 2008 + i); // Starting from 2008
+
+    const player1CareerPoints = [100, 200, 350, 300, 450, 500, 400, 650, 700, 600];
+    const player2CareerPoints = [150, 350, 500, 400, 620, 220, 380, 380, 520, 850];
+
+    function getYearSuffix(year) {
+        const j = year % 10;
+        const k = year % 100;
+        if (j === 1 && k !== 11) return `${year}st year`;
+        if (j === 2 && k !== 12) return `${year}nd year`;
+        if (j === 3 && k !== 13) return `${year}rd year`;
+        return `${year}th year`;
+    }
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: careerYears,
+            datasets: [
+                {
+                    label: 'Player 1',
+                    data: player1CareerPoints,
+                    borderColor: 'green',
+                    backgroundColor: 'green',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'green',
+                    pointBorderColor: 'green',
+                    pointRadius: 5,
+                    pointStyle: 'circle',
+                    fill: false
+                },
+                {
+                    label: 'Player 2',
+                    data: player2CareerPoints,
+                    borderColor: '#4b0082',
+                    backgroundColor: '#4b0082',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#4b0082',
+                    pointBorderColor: '#4b0082',
+                    pointRadius: 5,
+                    pointStyle: 'circle',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 20,
+                    bottom: 20,
+                    left: 20,
+                    right: 20
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Career Year'
+                    },
+                    ticks: {
+                        stepSize: 1,
+                        callback: function(value) {
+                            return value <= 10 ? value : '';
+                        }
+                    },
+                    min: 0,
+                    max: 10
+                },
+                y: {
+                    min: 0,
+                    max: 1000,
+                    ticks: {
+                        stepSize: 100
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    intersect: true,
+                    mode: 'nearest',
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const careerYear = tooltipItems[0].label;
+                            const actualYear = calendarYears[careerYear - 1];
+                            return `${getYearSuffix(careerYear)} (${actualYear})`;
+                        },
+                        label: function(tooltipItem) {
+                            const datasetLabel = tooltipItem.dataset.label || '';
+                            const points = tooltipItem.raw;
+                            return `${datasetLabel}: ${points} points`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>

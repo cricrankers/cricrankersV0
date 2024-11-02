@@ -1,4 +1,8 @@
-<link rel="stylesheet" href="/css/partials/profileStats.css">
+<head>
+    <link rel="stylesheet" href="/css/partials/profileStats.css?v=0.5">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
 
 <div class="profile-stats-container">
 
@@ -30,5 +34,5 @@
 <div class="profile-graph-container">
 
     <%- include('./statsPartials/statsHeader.ejs',{heading:'Career Graph'})%> 
-
+    <%- include('./statsPartials/profileChart.ejs')%> 
 </div>

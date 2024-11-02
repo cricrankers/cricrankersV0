@@ -4,11 +4,12 @@
 .profile-stats-container{
     width: 97%;
     height: fit-content;
-    min-height: 300px;
+    /* min-height: 200px; */
     margin-top: 20px;
     padding: 3% 0% 3%;
     background-color: #ffffff;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
@@ -24,12 +25,10 @@
 .profile-graph-container{
     width: 97%;
     height: fit-content;
-    min-height: 300px;
     margin-top: 20px;
     padding: 3% 0% 3%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
     border-radius: 12px;
 }
