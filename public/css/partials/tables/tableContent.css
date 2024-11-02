@@ -8,7 +8,10 @@
   .profile-img {
     height: 60%;
     border-radius: 99px;
+    min-height: 60px;
+    min-width: 60px;
     font-size: 8px;
+    background-color: #C8C9DF;
     width: fit-content;
   }
   .country-flag {
@@ -120,7 +123,7 @@
     min-height: 112.5px;
     min-width: 112.5px;
     width: fit-content;
-    background-color: #10122a;
+    background-color: #C8C9DF;
     overflow: hidden;
     font-size: 12px;
     border-top-left-radius: 8px;
@@ -139,7 +142,7 @@
   .photo-container {
     height: 75%;
     width: fit-content;
-    background-color: black;
+    background-color: #C8C9DF;
     overflow: hidden;
     border-radius: 8px;
     position: absolute;
@@ -287,6 +290,8 @@
     }
     .profile-img {
       height: 70%;
+      min-height: 49px;
+      min-width: 49px;
     }
     .even {
       background-color: white;
